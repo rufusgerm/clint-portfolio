@@ -1,0 +1,29 @@
+.footerbar {
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    background-color: white;
+    height: 45px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .footer-items {
+    display: flex;
+    flex-direction: row;
+    margin-left: 2rem;
+  }
+  .footer-item {
+    flex-direction: row;
+    margin-left: 1rem;
+    transition: 250ms ease-in-out;
+    cursor: pointer;
+  }
+  
+  .footer-item:hover {
+    opacity: 0.5;
+  }

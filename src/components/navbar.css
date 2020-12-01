@@ -1,0 +1,33 @@
+.menubar {
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  background-color: whitesmoke;
+  height: 45px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.menu-items {
+  display: flex;
+  flex-direction: row;
+  margin-left: 2rem;
+}
+.menu-item {
+  flex-direction: row;
+  margin-left: 1rem;
+}
+
+.menu-link {
+  transition: 250ms ease-in-out;
+  cursor: pointer;
+}
+
+.menu-link:hover {
+  opacity: 0.5;
+}
+

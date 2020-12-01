@@ -1,0 +1,14 @@
+.carousel {
+    align-items: center;
+    height: auto;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    filter: invert(100%);
+}
+
+
+.wtf {
+    border: 1px black solid;
+  }
