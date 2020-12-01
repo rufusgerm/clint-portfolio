@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
-import {
-  Carousel,
-  CarouselItem,
-  CarouselControl,
-  CarouselCaption
-} from 'reactstrap';
 import "./gallery.css"
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface GalleryItem {
     src?: string;
@@ -35,30 +31,15 @@ export const Gallery: React.FC<Props> = ({items}) => {
   }
 
   const slides = items?.map((item) => {
-    return (
-      <CarouselItem
-        onExiting={() => setAnimating(true)}
-        onExited={() => setAnimating(false)}
-        key={item.src}
-      >
-        <img src={item.src} alt={item.altText} />
-        <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
-      </CarouselItem>
-    );
+    return
   });
 
   return (
       <div 
-      className="gallery-carousel wtf">
-        <Carousel
-        activeIndex={activeIndex}
-        next={next}
-        previous={previous}
-        >
-        {slides}
-        <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-        <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
-        </Carousel>
+      className="gallery-carousel">
+        <div className="carousel-arrow"><FontAwesomeIcon className="arrow-icon left-arrow" icon="chevron-left" size="lg"/></div>
+        <div className="carousel-item"><img className="current-img" src="https://i.pinimg.com/originals/bb/55/66/bb5566c14a95f1897b1e258e0fcb69fe.jpg" alt="test-img"/></div>
+        <div className="carousel-arrow"><FontAwesomeIcon className="arrow-icon right-arrow" icon="chevron-right" size="lg"/></div>
     </div>
   );
 }
