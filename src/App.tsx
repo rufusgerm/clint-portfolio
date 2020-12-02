@@ -9,7 +9,12 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 
 library.add(fas, fab);
 
-const menuItems = [
+const brand = {
+    title: `clint sana`,
+    href: `/`,
+};
+
+const navItems = [
   {
     title: `about`,
     href: `/about`,
@@ -43,7 +48,8 @@ const galleryItems = [
 function App() {
   return (
     <div className="App">
-      <MenuBar items={menuItems} />
+
+      <MenuBar brand={brand} items={navItems} />
       <Gallery items={galleryItems} />
       <Footer />
     </div>
