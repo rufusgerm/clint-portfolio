@@ -1,0 +1,39 @@
+.slider {
+    z-index: 10;
+    height: 85vh;
+    width: 100vw;
+}
+
+    .slider-arrow {
+        height: 84vh;
+        width: 7.5vw;
+        opacity: 0.4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .left-arrow {
+            float: left;
+        }
+
+        .right-arrow {
+            float: right;
+        }
+
+        .arrow-icon {
+            transition: 400ms ease-in-out;
+        }
+
+        .arrow-icon:hover {
+            cursor: pointer;
+            opacity: 0.3;
+        }
+
+.wtf {
+    border: 1px black solid;
+}
+
+.wt {
+    border: 3px red solid;
+}

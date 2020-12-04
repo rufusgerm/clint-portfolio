@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-
 import './navbar.css';
 
 interface BrandItem {
@@ -11,7 +9,6 @@ interface MenuItem {
     href?: string;
     active?: boolean;
 }
-
 interface Props {
     items: MenuItem[];
     brand: BrandItem;
@@ -24,7 +21,6 @@ const createMenuItem = (item: any, idx: number) => {
 }
 
 export const MenuBar: React.FC<Props> = ({items, brand}) => {
-    
   return (
     <div className="menubar">
         <div className="menu-items"><p className="brand">{brand.title}</p></div>
