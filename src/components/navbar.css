@@ -4,17 +4,13 @@
   left: 0;
   top: 0;
   width: 100vw;
-  background-color: whitesmoke;
-  height: 7.5vh;
+  background-color: white;
+  max-height: 35px;
+  min-height: 35px;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-}
-
-.brand {
-  font-weight: 100;
-  opacity: 0.75;
-  font-size: 1.25rem;
 }
 
 .menu-items {
@@ -22,7 +18,15 @@
   flex-direction: row;
   margin-left: 1rem;
   height: 90%;
-  align-items: center;
+  /* align-items: center; */
+  text-decoration: none;
+  color: black;
+}
+.brand {
+  font-weight: 100;
+  opacity: 1;
+  font-size: 1.6rem;
+  margin-top: 0.4rem;
 }
 .menu-item {
   font-size: 1.15rem;
@@ -30,13 +34,12 @@
   margin-right: 0.75rem;
   font-size: 1rem;
 }
-
 .menu-link {
+  margin-top: 0.5rem;
   font-weight: 300;
   transition: 250ms ease-in-out;
   cursor: pointer;
-  margin-top: 1rem;
-  font-size: 0.9rem;
+  font-size: 1.25rem;
 }
 
 .menu-link:hover {

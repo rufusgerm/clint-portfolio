@@ -1,0 +1,47 @@
+.portrait-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80vw;
+  height: 84vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.portrait {
+  height: 65%;
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+.bio {
+  width: 75%;
+  font-weight: 300;
+  opacity: 0.6;
+}
+
+@media only screen and (max-height: 350px) {
+  .portrait-container {
+    height: 60%;
+  }
+
+  .portrait {
+    height: 55%;
+  }
+  .bio {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+}
+
+.wtf {
+  border: 1px black solid;
+}
+
+.wt {
+  border: 3px red solid;
+}

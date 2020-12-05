@@ -6,6 +6,10 @@ import './App.css';
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
+import { About } from './components/about';
+import { Switch, Route } from 'react-router-dom';
+import { Contact } from './components/contact';
+import { Error } from './components/error';
 
 library.add(fas, fab);
 
@@ -49,7 +53,12 @@ function App() {
   return (
     <div className="App">
       <MenuBar brand={brand} items={navItems} />
-      <Slider items={galleryItems} />
+      <Switch>
+        <Route path="/" component={Slider} exact/>
+        <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
+        <Route component={Error}/>
+      </Switch>
       <Footer />
     </div>
   );

@@ -12,11 +12,29 @@ interface Props {
   items: GalleryItem[];
 }
 
+const items = [
+  {
+    src: 'https://i.pinimg.com/originals/bb/55/66/bb5566c14a95f1897b1e258e0fcb69fe.jpg',
+    altText: 'Slide 1',
+    caption: 'Slide 1'
+  },
+  {
+    src: 'https://www.superprof.com/blog/wp-content/uploads/2019/05/history-of-painting-1060x771.jpg',
+    altText: 'Slide 2',
+    caption: 'Slide 2'
+  },
+  {
+    src: 'https://media.overstockart.com/optimized/cache/data/product_images/VG485-1000x1000.jpg',
+    altText: 'Slide 3',
+    caption: 'Slide 3'
+  }
+];
+
 const createSlides = (slide: number, item: GalleryItem, index: number) => {
   return slide !== index ? <Slide content={item} key={index} /> : <Slide visible content={item} key={index} />
 }
 
-export const Slider: React.FC<Props> = ({items}) => {
+export const Slider: React.FC<Props> = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const lastSlide = items.length - 1;
 
@@ -28,18 +46,18 @@ export const Slider: React.FC<Props> = ({items}) => {
     
   }
 
-  const autoPlayRef = useRef<any>();
+  // const autoPlayRef = useRef<any>();
 
-  useEffect(() => {
-    autoPlayRef.current = nextSlide('forward');
-  });
-  useEffect(() => {
-    const play = () => {
-      autoPlayRef.current();
-    }
-    const interval = setInterval(play, 3000);
-    return () => clearInterval(interval);
-  }, []);
+  // useEffect(() => {
+  //   autoPlayRef.current = nextSlide('forward');
+  // });
+  // useEffect(() => {
+  //   const play = () => {
+  //     autoPlayRef.current();
+  //   }
+  //   const interval = setInterval(play, 3000);
+  //   return () => clearInterval(interval);
+  // }, []);
   
 
   return (
