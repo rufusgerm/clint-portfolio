@@ -19,7 +19,7 @@ interface Props {
 
 const items = [
   {
-    src: one,
+    src: "../images/one.jpeg",
     altText: 'Slide 1',
     caption: 'Slide 1'
   },
