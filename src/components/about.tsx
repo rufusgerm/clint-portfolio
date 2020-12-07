@@ -1,5 +1,5 @@
 import * as React from 'react';
-import portrait from "../Portrait_Finished.jpeg";
+import portrait from "../images/portrait/portrait_final.jpeg";
 
 import "./about.css";
 export const About: React.FC<any> = (props) => {

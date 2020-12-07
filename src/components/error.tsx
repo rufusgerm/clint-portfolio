@@ -1,9 +1,10 @@
 import * as React from 'react';
+import "./error.css";
 
 export const Error: React.FC<any> = () => {
   return (
-      <div>
-          <h1>Oops! Page not found!</h1>
+      <div className="container">
+          <h1 className="error-header">Oops! Page not found!</h1>
       </div>
   );
 };

@@ -1,0 +1,16 @@
+.container {
+  height: 83vh;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-header {
+  /* margin: auto; */
+  font-weight: 200;
+}
+
+.wtf {
+  border: 1px black solid;
+}
