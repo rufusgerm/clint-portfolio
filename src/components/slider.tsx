@@ -2,6 +2,11 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Slide } from './slide';
 import "./slider.css";
 import { SliderArrow } from './sliderarrow';
+import one from "../images/one.jpeg";
+import two from "../images/two.jpeg";
+import three from "../images/three.jpeg";
+import four from "../images/four.jpeg";
+import five from "../images/five.jpeg";
 
 interface GalleryItem {
   src: string;
@@ -14,19 +19,29 @@ interface Props {
 
 const items = [
   {
-    src: 'https://i.pinimg.com/originals/bb/55/66/bb5566c14a95f1897b1e258e0fcb69fe.jpg',
+    src: one,
     altText: 'Slide 1',
     caption: 'Slide 1'
   },
   {
-    src: 'https://www.superprof.com/blog/wp-content/uploads/2019/05/history-of-painting-1060x771.jpg',
+    src: two,
     altText: 'Slide 2',
     caption: 'Slide 2'
   },
   {
-    src: 'https://media.overstockart.com/optimized/cache/data/product_images/VG485-1000x1000.jpg',
+    src: three,
     altText: 'Slide 3',
     caption: 'Slide 3'
+  },
+  {
+    src: four,
+    altText: 'Slide 4',
+    caption: 'Slide 4'
+  },
+  {
+    src: five,
+    altText: 'Slide 5',
+    caption: 'Slide 5'
   }
 ];
 
