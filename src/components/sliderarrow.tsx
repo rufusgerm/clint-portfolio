@@ -6,9 +6,6 @@ interface Props {
     direction: string;
     handleClick: () => any;
 }
-
-
-
 export const SliderArrow: React.FC<Props> = ({direction, handleClick}) => {
   return (
     <div className={`slider-arrow ${direction}-arrow`}>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Slide } from './slide';
 import "./slider.css";
 import { SliderArrow } from './sliderarrow';
@@ -16,38 +16,38 @@ const items = [
   {
     src: "one",
     altText: 'Slide 1',
-    caption: 'Slide 1'
+    caption: "`Mannginge'/ Amen`; oil on canvas",
   },
   {
     src: "two",
     altText: 'Slide 2',
-    caption: 'Slide 2'
+    caption: "`guam`; oil on canvas",
   },
   {
     src: "three",
     altText: 'Slide 3',
-    caption: 'Slide 3'
+    caption: "`16 tins of spam`; oil on canvas",
   },
   {
     src: "four",
     altText: 'Slide 4',
-    caption: 'Slide 4'
+    caption: "`Transmission from the dead`; oil on canvas", 
   },
   {
     src: "five",
     altText: 'Slide 5',
-    caption: 'Slide 5'
+    caption: "`[untitled]`; oil on canvas"
   }
 ];
 
-const createSlides = (slide: number, item: GalleryItem, index: number) => {
-  return slide !== index ? <Slide content={item} key={index} /> : <Slide visible content={item} key={index} />
-}
+let timer: any;
 
+const createSlides = (slide: number, item: GalleryItem, index: number) => {
+  return slide !== index ? <Slide content={item} key={index+item.caption} /> : <Slide visible content={item} key={index} />
+}
 export const Slider: React.FC<Props> = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const lastSlide = items.length - 1;
-
   const nextSlide = (direction: string) => {
     if(direction === 'reverse') {
       setCurrentSlide(currentSlide === 0 ? lastSlide : currentSlide - 1);
@@ -56,20 +56,13 @@ export const Slider: React.FC<Props> = () => {
       setCurrentSlide(currentSlide === lastSlide ? 0 : currentSlide + 1);
     }
   }
-
-  // const autoPlayRef = useRef<any>();
-
-  // useEffect(() => {
-  //   autoPlayRef.current = nextSlide('forward');
-  // });
-  // useEffect(() => {
-  //   const play = () => {
-  //     autoPlayRef.current();
-  //   }
-  //   const interval = setInterval(play, 3000);
-  //   return () => clearInterval(interval);
-  // }, []);
   
+  useEffect(() => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      nextSlide('forward');
+    }, 7500);
+  });
 
   return (
     <div className="slider">

@@ -47,11 +47,3 @@
 .footer-item:hover {
   opacity: 0.35;
 }
-
-.wtf {
-  border: 1px black solid;
-}
-
-.wt {
-  border: 3px red solid;
-}

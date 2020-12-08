@@ -7,12 +7,10 @@ interface Content {
     altText: string;
     caption: string;
 }
-
 interface Props {
     content: Content;
     visible?: boolean;
 }
-
 export const Slide: React.FC<Props> = ({content, visible}) => {
     const [isLoaded, setIsLoaded] = React.useState(false);
     return (
@@ -23,6 +21,10 @@ export const Slide: React.FC<Props> = ({content, visible}) => {
                 src={`https://dxq463jrikcvb.cloudfront.net/${content.src}.jpeg`} 
                 alt={content.altText} 
                 onLoad={() => setIsLoaded(true)} />
+                <button>
+                    <span className="info-btn">i</span>
+                    <span className="hover-value">{content.caption}</span>
+                </button>
             </div>
         </div>
     );
