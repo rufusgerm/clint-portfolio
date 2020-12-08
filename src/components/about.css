@@ -10,12 +10,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  opacity: 0;
+  transition: opacity 1000ms ease-in-out;
 }
 
 .portrait {
   height: 65%;
   max-width: 100%;
   border-radius: 15px;
+}
+
+.portrait-visible {
+  opacity: 1;
 }
 
 .bio {
