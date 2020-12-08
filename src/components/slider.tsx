@@ -43,7 +43,7 @@ const items = [
 let timer: any;
 
 const createSlides = (slide: number, item: GalleryItem, index: number) => {
-  return slide !== index ? <Slide content={item} key={index+item.caption} /> : <Slide visible content={item} key={index} />
+  return slide !== index ? <Slide content={item} key={index} /> : <Slide visible content={item} key={index} />
 }
 export const Slider: React.FC<Props> = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
