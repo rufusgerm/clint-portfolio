@@ -16,7 +16,7 @@ export const Slide: React.FC<Props> = ({content, visible}) => {
     return (
         <div className={`slide-content ${visible ? `slide-visible` : ``}`}>
             <div className="slide">
-                <img className="slide-img" src={content.src} alt={content.altText}/>
+                <img className="slide-img" src={`https://dxq463jrikcvb.cloudfront.net/${content.src}.jpeg`} alt={content.altText}/>
             </div>
         </div>
     );

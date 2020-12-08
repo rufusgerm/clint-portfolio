@@ -1,12 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { Slide } from './slide';
 import "./slider.css";
 import { SliderArrow } from './sliderarrow';
-import one from "../images/one.jpeg";
-import two from "../images/two.jpeg";
-import three from "../images/three.jpeg";
-import four from "../images/four.jpeg";
-import five from "../images/five.jpeg";
 
 interface GalleryItem {
   src: string;
@@ -19,27 +14,27 @@ interface Props {
 
 const items = [
   {
-    src: "../images/one.jpeg",
+    src: "one",
     altText: 'Slide 1',
     caption: 'Slide 1'
   },
   {
-    src: two,
+    src: "two",
     altText: 'Slide 2',
     caption: 'Slide 2'
   },
   {
-    src: three,
+    src: "three",
     altText: 'Slide 3',
     caption: 'Slide 3'
   },
   {
-    src: four,
+    src: "four",
     altText: 'Slide 4',
     caption: 'Slide 4'
   },
   {
-    src: five,
+    src: "five",
     altText: 'Slide 5',
     caption: 'Slide 5'
   }
@@ -57,8 +52,9 @@ export const Slider: React.FC<Props> = () => {
     if(direction === 'reverse') {
       setCurrentSlide(currentSlide === 0 ? lastSlide : currentSlide - 1);
     }
-    setCurrentSlide(currentSlide === lastSlide ? 0 : currentSlide + 1);
-    
+    else if(direction === 'forward') {
+      setCurrentSlide(currentSlide === lastSlide ? 0 : currentSlide + 1);
+    }
   }
 
   // const autoPlayRef = useRef<any>();
